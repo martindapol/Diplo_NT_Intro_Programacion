@@ -1,0 +1,8 @@
+Algoritmo Practica03
+	Definir lado,perimetro Como Real
+	Escribir 'Ingrese lado del cuadrado en cm'
+	Leer lado
+	perimetro <- lado*4
+	Escribir 'El perímetro es: ',perimetro,' cm'
+FinAlgoritmo
+

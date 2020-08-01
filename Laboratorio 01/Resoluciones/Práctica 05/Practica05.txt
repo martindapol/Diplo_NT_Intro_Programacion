@@ -1,0 +1,17 @@
+Algoritmo Practica05
+	Definir num1,num2 Como Entero
+	Definir prod,sum,dif Como Entero
+	// Entrada:
+	num1 <- azar(10)
+	num2 <- azar(10)
+	// Proceso:
+	sum <- num1+num2
+	dif <- num1-num2
+	prod <- num1*num2
+	// Salida:
+	Escribir 'Numeros al azar: num1: ',num1,' y num2: ',num2
+	Escribir 'La suma es: ',sum
+	Escribir 'La diferencia es: ',dif
+	Escribir 'El producto es: ',prod
+FinAlgoritmo
+

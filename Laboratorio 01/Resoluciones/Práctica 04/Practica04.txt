@@ -1,0 +1,14 @@
+Algoritmo Practica04
+	Definir km,pr,kml,cant_lts,importe Como Real
+	Escribir 'Ingrese kilómetros recorridos'
+	Leer km
+	Escribir 'Ingrese precio de combustible por litro'
+	Leer pr
+	Escribir 'Ingrese kilómetros recorrido por litro'
+	Leer kml
+	cant_lts <- km/kml
+	importe <- cant_lts*pr
+	Escribir 'Cantidad de litros consumidos: ',cant_lts
+	Escribir 'Importe gastado en combustible: $ ',importe
+FinAlgoritmo
+
