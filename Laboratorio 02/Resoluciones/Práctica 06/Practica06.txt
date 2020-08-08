@@ -1,0 +1,18 @@
+Algoritmo Practica06
+	Definir lado1, lado2, lado3, sp, area Como Real
+	
+	//Entradas:
+	Escribir "Ingrese lado1 del triágulo:"
+	Leer lado1
+	Escribir "Ingrese lado2 del triágulo:"
+	Leer lado2
+	Escribir "Ingrese lado3 del triágulo:"
+	Leer lado3
+	
+	//Proceso:
+	sp <- (lado1 + lado2 + lado3)/ 2
+	area <-rc(sp * (sp-lado1) * (sp-lado2) * (sp-lado3))
+	
+	//Salida:
+	Escribir "El área del triángulo de lado: ", lado1, ", " ,lado2, ", ", lado3, " es: ", area	
+FinAlgoritmo

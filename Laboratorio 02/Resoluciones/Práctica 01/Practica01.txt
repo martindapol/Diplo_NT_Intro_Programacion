@@ -1,0 +1,14 @@
+Algoritmo Practica01
+	Definir tiempo,resto,horas,min,seg Como Entero
+	// Entradas:
+	Escribir 'Ingrese cantidad de segundos a convertir: '
+	Leer tiempo
+	// Proceso:
+	horas <- trunc(tiempo/3600)
+	resto <- tiempo MOD 3600
+	min <- trunc(resto/60)
+	seg <- resto MOD 60
+	// Salidas:
+	Escribir 'Resultado: ',horas,':',min,':',seg
+FinAlgoritmo
+

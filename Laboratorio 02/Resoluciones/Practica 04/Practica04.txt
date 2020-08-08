@@ -1,0 +1,21 @@
+Algoritmo Practica04
+	Definir billetes1000,billetes500,billetes200,billetes100,monto Como Entero
+	Definir resto1000,resto500,resto200 Como Entero
+	// Entrada:
+	Escribir 'Ingrese cantidad de dinero a extraer (Múltiplo de 100):'
+	Leer monto
+	// Proceso:
+	billetes1000 <- trunc(monto/1000)
+	resto1000 <- monto MOD 1000
+	billetes500 <- trunc(resto1000/500)
+	resto500 <- resto1000 MOD 500
+	billetes200 <- trunc(resto500/200)
+	resto200 <- resto500 MOD 200
+	billetes100 <- trunc(resto200/100)
+	// Salida:
+	Escribir 'Total billetes 1000: ',billetes1000
+	Escribir 'Total billetes 500: ',billetes500
+	Escribir 'Total billetes 200: ',billetes200
+	Escribir 'Total billetes 100: ',billetes100
+FinAlgoritmo
+

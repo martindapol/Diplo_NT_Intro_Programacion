@@ -1,0 +1,12 @@
+Algoritmo Practica03
+	Definir anio_nac,anio_actual,edad Como Entero
+	anio_actual <- 2020
+	// Entrada:
+	Escribir 'Ingrese año de nacimiento'
+	Leer anio_nac
+	// Proceso:
+	edad <- anio_actual-anio_nac
+	// Salida:
+	Escribir 'Su edad al 31 del ',anio_actual,' es: ',edad,' años'
+FinAlgoritmo
+

@@ -1,0 +1,11 @@
+Algoritmo Practica05
+	Definir radio,volumen Como Real
+	// Entrada:
+	Escribir 'Ingrese el radio de la esfera:'
+	Leer radio
+	// Proceso:
+	volumen <- (4/3)*PI*(radio^3)
+	// Salida:
+	Escribir 'Volumen de la esfera de radio: ',radio,' es: ',volumen
+FinAlgoritmo
+
