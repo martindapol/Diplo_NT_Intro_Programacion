@@ -1,0 +1,46 @@
+Algoritmo Practica31
+	Definir num,cp,ci Como Entero
+	// variable bandera o flag:
+	Definir paso0,avisoPI,paridad,anterior Como Logico
+	// inicializar las variables auxiliares: contadores/acumuladores/banderas
+	cp <- 0
+	ci <- 0
+	paso0 <- Falso // asumir que no pasó
+	avisoPI <- Verdadero // asumir que la secuencia viene como Par-Impar
+	anterior <- Falso
+	// Entrada
+	Escribir 'Ingrese un valor entero. Finaliza con un negativo'
+	Leer num
+	// Proceso: ciclo + conteo y las validaciones
+	Mientras num>=0 Hacer // comienza el while:		
+		paridad <- num MOD 2==0
+		Si paridad==Verdadero Entonces
+			// Pares:
+			// Contador = Contador + Cantidad fija
+			cp <- cp+1
+		SiNo
+			// Impares
+			ci <- ci+1
+		FinSi
+		Si num==0 Entonces
+			// predndemos la bandera
+			paso0 <- Verdadero
+		FinSi
+		Si paridad==anterior Entonces
+			avisoPI <- Falso
+		FinSi
+		// valor de  paridad de la lectura anterior
+		anterior <- paridad
+		Escribir 'Ingrese un valor entero. Finaliza con un negativo'
+		Leer num
+	FinMientras // Termina el while
+	// Salidas: luego del ciclo
+	Escribir 'Cantidad de pares: ',cp,' y de impares: ',ci
+	Si paso0==Verdadero Entonces
+		Escribir 'Paso al menos un cero!'
+	FinSi
+	Si avisoPI==Verdadero Entonces
+		Escribir 'Paso secuencia Par-Impar'
+	FinSi
+FinAlgoritmo
+
