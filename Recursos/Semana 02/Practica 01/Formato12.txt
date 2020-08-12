@@ -1,0 +1,20 @@
+Algoritmo Formato12
+	Definir horas,minutos Como Entero
+	Definir am_pm Como Caracter
+	Escribir 'Ingrese horas [Formato 24]'
+	Leer horas
+	Escribir 'Ingrese minutos [Formato 24]'
+	Leer minutos
+	Si (horas<0 O horas>24) Entonces
+		Escribir 'Valor incorrecto'
+	SiNo
+		Si horas>12 Entonces
+			horas <- horas-12
+			am_pm <- 'PM'
+		SiNo
+			am_pm <- 'AM'
+		FinSi
+		Escribir 'La hora es ',horas,':',minutos,' ',am_pm
+	FinSi
+FinAlgoritmo
+

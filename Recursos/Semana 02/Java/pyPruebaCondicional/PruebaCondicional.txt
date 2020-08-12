@@ -1,0 +1,11 @@
+Algoritmo PruebaCondicional
+	Definir num como Entero
+	Escribir "Ingrese número: "
+	Leer num
+	Si num MOD 2 == 0 Entonces
+		Escribir "El número es PAR"
+	SiNo
+		Escribir "El número no es PAR"
+	FinSi
+FinAlgoritmo
+

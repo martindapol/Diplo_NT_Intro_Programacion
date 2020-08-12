@@ -1,35 +1,33 @@
 Algoritmo Practica32
-	Definir posicionX, posicionY como Entero
-	Definir op como Entero
-	//inicializamos la posición del robot:
+	Definir posicionX,posicionY Como Entero
+	Definir op Como Entero
+	// inicializamos la posición del robot:
 	posicionX <- azar(100)
 	posicionY <- azar(100)
-	
 	Repetir
-		//Mostrar la posición actual del robot:
-		Escribir "TITO está en (", posicionX, ",", posicionY, ")"
-		Escribir "1. Girar al Norte y avanzar 10 pasos"
-		Escribir "2. Girar al Sur y avanzar 20 pasos"
-		Escribir "3. Girar al Este y avanzar 10 pasos"
-		Escribir "4. Girar al Oste y avanzar 10 pasos"
-		Escribir "5. Salir"
-		
-		//leer la opción que elija el usuario:
+		// Mostrar la posición actual del robot:
+		Escribir 'TITO está en (',posicionX,',',posicionY,')'
+		Escribir '1. Girar al Norte y avanzar 10 pasos'
+		Escribir '2. Girar al Sur y avanzar 20 pasos'
+		Escribir '3. Girar al Este y avanzar 10 pasos'
+		Escribir '4. Girar al Oste y avanzar 10 pasos'
+		Escribir '5. Salir'
+		// leer la opción que elija el usuario:
 		Leer op
-		Segun op Hacer
+		Segun op  Hacer
 			1:
-				posicionY <- posicionY + 10
+				posicionY <- posicionY+10
 			2:
-				posicionY <- posicionY - 20
+				posicionY <- posicionY-20
 			3:
-				posicionX <- posicionX + 10
+				posicionX <- posicionX+10
 			4:
-				posicionX <- posicionX - 20
+				posicionX <- posicionX-20
 			5:
-				Escribir "Adios TITO! "
+				Escribir 'Adios TITO! '
 			De Otro Modo:
-				Escribir "Opción incorrecta! "
-		Fin Segun		
-	Hasta Que op == 5
-	
+				Escribir 'Opción incorrecta! '
+		FinSegun
+	Hasta Que op==5
 FinAlgoritmo
+
