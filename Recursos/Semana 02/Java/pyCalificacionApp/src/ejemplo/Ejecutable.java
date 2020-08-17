@@ -26,34 +26,33 @@ public class Ejecutable {
         Si es otra, indicar valor no permitido!
          */
         Scanner entrada = new Scanner(System.in);
-        int  calificacion;
+        short calificacion;
         String valoracion = "";
-        String color = "";
         //Entrada:
         System.out.println("Ingrese la calificación de la app: ");
         calificacion = entrada.nextShort();
 
         //condicional multiple1:
         //Proceso y salida:
-        switch (color) {//empieza el switch
-            case "Blanco": {
+        switch (calificacion) {//empieza el switch
+            case 1: {
                 valoracion = "Calificación REGULAR";
+                
+            }
+            case 2: {
+                valoracion = "Calificación MUY BUENA";
                 break;
             }
-            case "Rojo": {
-                valoracion = "Calificación MUY BUENA";
-                 break;
-            }
-            case "Azul": {
+            case 3: {
                 valoracion = "Calificación RECOMENDADA";
-                 break;
+                break;
             }
-           
+
             default: {
                 valoracion = "Valor de calificación NO PERMITIDO!";
             }
         }//fin de switch 
-        
+
         System.out.println(valoracion);
     }
 }

@@ -1,0 +1,25 @@
+Algoritmo Practica01
+	Definir hh,mm,hh12 Como Entero
+	Definir amPm Como Caracter
+	Escribir 'Ingrese hora en formato 24: '
+	Leer hh
+	Escribir 'Ingrese minutos: '
+	Leer mm
+	hh12 <- hh
+	Si hh>=12 Entonces
+		Si hh>12 Entonces
+			hh12 <- (hh-12)
+		FinSi
+		amPm <- 'PM'
+		Si hh==24 Y mm==0 Entonces
+			amPm <- 'AM'
+		FinSi
+	SiNo
+		amPm <- 'AM'
+		Si hh==0 Y mm==0 Entonces
+			hh12 <- hh12+12
+		FinSi
+	FinSi
+	Escribir 'La hora en formamto 12 es: ',hh12,':',mm,' ',amPm
+FinAlgoritmo
+

@@ -1,0 +1,36 @@
+Algoritmo Practica08
+	Definir coordenadaX, coordenadaY, op Como Entero
+	
+	//Generar posición inicial aleatoria del robot
+	coordenadaX <-azar(100)
+	coordenadaY <-azar(100)
+	
+	Repetir
+		//Mostrar posición del robot:
+		Escribir "Tito en (", coordenadaX, ";", coordenadaY, ")"
+		Escribir ""
+		
+		Escribir "1) Girar al norte y avanzar 10 pasos"
+		Escribir "2) Girar al sur y avanzar 10 pasos"
+		Escribir "3) Girar al este y avanzar 10 pasos"
+		Escribir "4) Girar al oeste y avanzar 10 pasos"
+		Escribir "5) Salir"
+		Escribir "Seleccione una opción"
+		Leer op
+		
+		Segun op Hacer
+			1:
+				coordenadaY <- coordenadaY + 10
+			2:
+				coordenadaY <- coordenadaY - 20
+			3:
+				coordenadaX <- coordenadaX + 10
+			4:
+				coordenadaX <- coordenadaX - 20	
+			De Otro Modo:
+				Escribir "Opción incorrecta!"
+		Fin Segun
+			
+	Hasta Que op = 5
+	
+FinAlgoritmo

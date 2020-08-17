@@ -1,0 +1,63 @@
+Algoritmo Practica03
+	Definir cartaJ1,paloJ1,cartaJ2,paloJ2,puntajeJ1,puntajeJ2 Como Entero
+	puntajeJ1 <- 0
+	puntajeJ2 <- 0
+	Escribir 'RONDA 1:'
+	Escribir 'Ingrese carta y palo del Jugador 1, recuerde [1-Copa|2-Basto|3-Espada|4-Oro]'
+	Leer cartaJ1,paloJ1
+	Escribir 'Ingrese carta y palo del Jugador 2'
+	Leer cartaJ2,paloJ2
+	Si cartaJ1>cartaJ2 Entonces
+		puntajeJ1 <- (cartaJ1+cartaJ2)
+	SiNo
+		Si cartaJ1<cartaJ2 Entonces
+			puntajeJ2 <- (cartaJ1+cartaJ2)
+		SiNo
+			// Son cartas de igual valor, gana el que tenga oro
+			Si paloJ1==4 Entonces
+				puntajeJ1 <- (cartaJ1+cartaJ2)
+			SiNo
+				Si paloJ2==4 Entonces
+					puntajeJ2 <- (cartaJ1+cartaJ2)
+				SiNo
+					puntajeJ1 <- cartaJ1
+					puntajeJ2 <- cartaJ2
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+	Escribir 'RONDA 2:'
+	Escribir 'Ingrese carta y palo del Jugador 1'
+	Leer cartaJ1,paloJ1
+	Escribir 'Ingrese carta y palo del Jugador 2'
+	Leer cartaJ2,paloJ2
+	// NOTA: para la segunda ronda "acumulamos" los puntajes con los de la primer ronda
+	Si cartaJ1>cartaJ2 Entonces
+		puntajeJ1 <- puntajeJ1+(cartaJ1+cartaJ2)
+	SiNo
+		Si cartaJ1<cartaJ2 Entonces
+			puntajeJ2 <- puntajeJ2+(cartaJ1+cartaJ2)
+		SiNo
+			Si paloJ1==4 Entonces
+				puntajeJ1 <- puntajeJ1+(cartaJ1+cartaJ2)
+			SiNo
+				Si paloJ2==4 Entonces
+					puntajeJ2 <- puntajeJ2+(cartaJ1+cartaJ2)
+				SiNo
+					puntajeJ1 <- puntajeJ1+cartaJ1
+					puntajeJ2 <- puntajeJ2+cartaJ2
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+	Si puntajeJ1>puntajeJ2 Entonces
+		Escribir 'Gana Jugador 1 con: ',puntajeJ1,' puntos.'
+	SiNo
+		Si puntajeJ1<puntajeJ2 Entonces
+			Escribir 'Gana Jugador 2 con: ',puntajeJ2,' puntos.'
+		SiNo
+			Escribir 'Empate!!! con: ',puntajeJ1,' puntos.'
+		FinSi
+	FinSi
+FinAlgoritmo
+

@@ -1,0 +1,48 @@
+Algoritmo Practica06
+	Definir n,tipo Como Entero
+	Definir monto,may,promedio,acuV,acuL Como Real
+	Definir nom,nom_may Como Texto 
+	Definir avisoP Como Logico
+	
+	
+	acuL <- 0
+	acuV <- 0
+	avisoP <- Falso
+	Escribir 'Ingrese cantidad de barcos: '
+	Leer n
+	Para i<-0 Hasta n Hacer
+		Escribir 'Ingrese nombre de la embarcación: '
+		Leer nom
+		Escribir 'Ingrese tipo de la embarcación: [1-Velero|2-Lancha] '
+		Leer tipo
+		Escribir 'Ingrese monto que paga mensualmente en $: '
+		Leer monto
+		Si tipo==1 Entonces
+			acuV <- acuV+monto*12
+			Si avisoP==false Entonces
+				may <- monto
+				nom_may <- nom
+				avisoP <- True
+			SiNo
+				Si monto>may Entonces
+					may <- monto
+					nom_may <- nom
+				FinSi
+			FinSi
+		SiNo
+			acuL <- acuL+monto*12
+		FinSi
+	FinPara
+	Si n>0 Entonces
+		promedio <- (acuL+acuV)/n
+	SiNo
+		promedio <- 0
+	FinSi
+	Escribir 'Acumulado anual veleros $:',acuV
+	Escribir 'Acumulado anual lanchas $:',acuL
+	Si avisoP==True Entonces
+		Escribir 'El velero que más pagó es: ',nomMay,' un monto de $: ',may
+	FinSi
+	Escribir 'El promedio anual percibido es de $: ',promedio
+FinAlgoritmo
+

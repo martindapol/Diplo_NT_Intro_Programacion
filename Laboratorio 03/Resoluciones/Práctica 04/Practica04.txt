@@ -1,0 +1,22 @@
+Algoritmo Practica04
+	Definir articulo Como Caracter
+	Definir clave Como Entero
+	Definir precio,precioFinal Como Real
+	Escribir 'Ingrese nombre del artículo: '
+	Leer articulo
+	Escribir 'Ingrese clave del artículo [1|2]: '
+	Leer clave
+	Si clave==1 O clave==2 Entonces
+		Escribir 'Ingrese precio del artículo: '
+		Leer precio
+		Si clave==1 Entonces
+			precioFinal <- precio*0.9
+		SiNo
+			precioFinal <- precio*0.8
+		FinSi
+		Escribir 'Articulo: ',articulo,' |Clave: ',clave,' |Precio original $: ',precio,' |Precio condescuento $: ',precioFinal
+	SiNo
+		Escribir 'Error de carga. Valor de clave incorrecto!'
+	FinSi
+FinAlgoritmo
+

@@ -1,0 +1,11 @@
+Algoritmo Practica02
+	Definir anio Como Entero
+	Escribir 'Ingrese año: '
+	Leer anio
+	Si ((anio MOD 4==0 Y  NO (anio MOD 100==0)) O anio MOD 400==0) Entonces
+		Escribir 'Año bisiesto'
+	SiNo
+		Escribir 'Año NO bisiesto'
+	FinSi
+FinAlgoritmo
+

@@ -1,0 +1,37 @@
+Algoritmo Practica07
+	Definir n,i,cont13 Como Entero
+	Definir x1,y1,xMay,yMay,dist,distMay Como Real
+	Definir primero Como Logico
+	primero <- Verdadero
+	cont13 <- 0
+	Repetir
+		Escribir 'Ingrese cantidad de puntos: '
+		Leer n
+	Hasta Que n>0
+	Para i<-1 Hasta n Hacer
+		Escribir 'Ingrese coordenada x del punto: '
+		Leer x1
+		Escribir 'Ingrese coordenada y del punto: '
+		Leer y1
+		dist <- rc(x1^2+y1^2)
+		Si (x1>0 Y y1>0) O (x1<0 Y y1<0) Entonces
+			cont13 <- cont13+1
+		FinSi
+		Si primero=Verdadero Entonces
+			xMay <- x1
+			yMay <- y1
+			distMay <- dist
+			primero <- Falso
+		SiNo
+			Si dist>distMay Entonces
+				xMay <- x1
+				yMay <- y1
+				distMay <- dist
+			FinSi
+		FinSi
+	FinPara
+	// salidas:
+	Escribir 'Cantidad de puntos ubicados en cuadrante I o III: ',cont13
+	Escribir 'El punto con mayor distancia al origen es: (',xMay,';',yMay,')'
+FinAlgoritmo
+

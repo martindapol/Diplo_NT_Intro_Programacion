@@ -1,0 +1,39 @@
+Algoritmo sin_titulo
+	Definir num,cp,ci Como Entero
+	Definir aviso0,avisoPI,parActual,parAnt Como Logico
+	cp <- 0
+	ci <- 0
+	aviso0 <- Falso
+	avisoPI <- Verdadero
+	parAnt <- Falso
+	Escribir 'Ingrese un número:'
+	Leer num
+	Mientras num>=0 Hacer
+		parActual <- num MOD 2==0
+		Si parActual Entonces
+			cp <- cp+1
+		SiNo
+			ci <- ci+1
+		FinSi
+		Si num=0 Entonces
+			aviso0 <- Verdadero
+		FinSi
+		Si parActual=parAnt Entonces
+			avisoPI <- Falso
+		FinSi
+		parAnt <- parActual
+		Escribir 'Ingrese un número:'
+		Leer num
+	FinMientras
+	Escribir 'Total de pares: ',cp
+	Escribir 'Total de impares: ',ci
+	Si aviso0=Verdadero Entonces
+		Escribir 'Pasó al menos un cero'
+	FinSi
+	Si avisoPI=Verdadero Entonces
+		Escribir 'Serie con alternancia P-I'
+	SiNo
+		Escribir 'Serie sin alternancia P-I'
+	FinSi
+FinAlgoritmo
+
