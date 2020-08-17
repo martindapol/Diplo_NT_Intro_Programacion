@@ -25,7 +25,7 @@ public class Practica05 {
         radio = input.nextFloat();
         
         //Proceso:
-        volumen = Math.PI * (4/3) * Math.pow(radio, 3);
+        volumen = Math.PI * (4.0/3.0) * Math.pow(radio, 3);
         
         //Salida:
         System.out.println("Volumen de la esfera de radio: " + radio + " es: " + volumen);
