@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/MARTIN/Desktop/pyCamiones/src/com/ejemplo/dominio/Packing.java</file>
+            <file>file:/C:/Users/MARTIN/Desktop/pyCamiones/src/com/ejemplo/gui/JFPrincipal.java</file>
+            <file>file:/C:/Users/MARTIN/Desktop/pyCamiones/src/com/ejemplo/gui/JDSubirCarga.java</file>
             <file>file:/C:/Users/MARTIN/Desktop/pyCamiones/src/com/ejemplo/Ejecutable.java</file>
-            <file>file:/C:/Users/MARTIN/Desktop/pyCamiones/src/com/ejemplo/dominio/Carga.java</file>
             <file>file:/C:/Users/MARTIN/Desktop/pyCamiones/src/com/ejemplo/dominio/Camion.java</file>
-            <file>file:/C:/Users/MARTIN/Desktop/pyCamiones/src/com/ejemplo/dominio/Caja.java</file>
         </group>
     </open-files>
 </project-private>
