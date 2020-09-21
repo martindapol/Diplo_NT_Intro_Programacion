@@ -9,7 +9,6 @@ import com.example.domain.Historico;
 import com.example.domain.ObjetoExp;
 import com.example.domain.ObraArte;
 import com.example.services.GestorSala;
-import java.io.FileOutputStream;
 import javax.swing.JOptionPane;
 
 /**

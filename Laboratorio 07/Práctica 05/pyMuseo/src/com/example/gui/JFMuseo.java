@@ -25,7 +25,7 @@ public class JFMuseo extends javax.swing.JFrame {
      * Creates new form JFMuseo
      */
     private GestorSala gestor;
-    
+
     public JFMuseo() {
         initComponents();
         jbConsultar.addMouseListener(new EscuchaMouse());
@@ -33,7 +33,7 @@ public class JFMuseo extends javax.swing.JFrame {
         DefaultComboBoxModel modelo = new DefaultComboBoxModel(gestor.getSalas());
         jcSalas.setModel(modelo);
         //abrir en el centro de la pantalla:
-        setLocationRelativeTo(null);  
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -77,6 +77,11 @@ public class JFMuseo extends javax.swing.JFrame {
         jLabel1.setText("Sala:");
 
         jbConsultar.setText("Consultar");
+        jbConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbConsultarActionPerformed(evt);
+            }
+        });
 
         jlTotal.setText("Total de objetos:");
 
@@ -129,12 +134,16 @@ public class JFMuseo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAgregarActionPerformed
-        
-        if(jcSalas.getSelectedItem()!=null)
+
+        if (jcSalas.getSelectedItem() != null) {
             new JDNuevoObjeto(this, true, gestor, jcSalas.getSelectedItem().toString()).setVisible(true);
+        }
     }//GEN-LAST:event_jbAgregarActionPerformed
 
-   
+    private void jbConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbConsultarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbConsultarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
@@ -146,34 +155,34 @@ public class JFMuseo extends javax.swing.JFrame {
     private javax.swing.JTable jtObjetos;
     // End of variables declaration//GEN-END:variables
 
-    class EscuchaMouse extends MouseAdapter{
-        
+    class EscuchaMouse extends MouseAdapter {
+
         @Override
         public void mouseClicked(MouseEvent me) {
-            
-            String[]columnas = {"Código", "Nombre", "Año", "Zona", "Origen",
+
+            String[] columnas = {"Código", "Nombre", "Año", "Zona", "Origen",
                 "Autor", "País"};
-            DefaultTableModel tabla =  new DefaultTableModel();
+            DefaultTableModel tabla = new DefaultTableModel();
             tabla.setColumnIdentifiers(columnas);
-            
-           Sala s = (Sala)jcSalas.getSelectedItem();
-            if(s!=null){
+
+            Sala s = (Sala) jcSalas.getSelectedItem();
+            if (s != null) {
                 jlTotal.setText("Total de objetos:" + s.getTotalObjetos());
-                
+
                 String[] fila = new String[7];
-                for(ObjetoExp obj : s.getObjetos()){
+                for (ObjetoExp obj : s.getObjetos()) {
                     fila[0] = String.valueOf(obj.getCod());
                     fila[1] = obj.getNombre();
                     fila[2] = String.valueOf(obj.getAnio());
-                    
-                    if(obj instanceof Historico){
-                        Historico h = (Historico)obj;
+
+                    if (obj instanceof Historico) {
+                        Historico h = (Historico) obj;
                         fila[3] = h.getZona();
                         fila[4] = h.getOrigen();
                         fila[5] = "";
                         fila[6] = "";
-                    }else{
-                        ObraArte o = (ObraArte)obj;
+                    } else {
+                        ObraArte o = (ObraArte) obj;
                         fila[3] = "";
                         fila[4] = "";
                         fila[5] = o.getAutor();
@@ -182,7 +191,7 @@ public class JFMuseo extends javax.swing.JFrame {
                     tabla.addRow(fila);
                 }
                 jtObjetos.setModel(tabla);
-            }  
+            }
         }
     }
 }
